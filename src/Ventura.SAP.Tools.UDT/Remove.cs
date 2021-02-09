@@ -1,16 +1,15 @@
-﻿using SAPbobsCOM;
-using System;
+﻿using System;
+using SAPbobsCOM;
 using Ventura.SAP.Tools.CrossCutting.Utils;
 
-namespace Ventura.SAP.Tools.UDO
+namespace Ventura.SAP.Tools.UDT
 {
     public class Remove
     {
         private static int ERROR_CODE;
         private static string ERROR_MESSAGE;
 
-        [STAThread]
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             Company company = SAPHelper.GetCompany();
             if (company.Connected)
@@ -24,7 +23,7 @@ namespace Ventura.SAP.Tools.UDO
                 Environment.Exit(ERROR_CODE);
             }
 
-            var udoManager = (UserObjectsMD)company.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
+            var udoManager = (UserTablesMD)company.GetBusinessObject(BoObjectTypes.oUserTables);
             for (int i = 0; i < args.Length; i++)
             {
                 var item = args[i];

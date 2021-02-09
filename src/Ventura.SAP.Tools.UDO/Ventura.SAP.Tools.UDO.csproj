@@ -49,7 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Ventura.SAP.Tools.CrossCutting\Ventura.SAP.Tools.CrossCutting.csproj">
+      <Project>{D4615813-B08D-417E-BFC9-275F6EE5D6D3}</Project>
+      <Name>Ventura.SAP.Tools.CrossCutting</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
