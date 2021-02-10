@@ -8,14 +8,15 @@ namespace Ventura.SAP.Tools.UDT
     {
         private static int ERROR_CODE;
         private static string ERROR_MESSAGE;
+        private static int RESULT_FUNCTIONS;
 
         static void Main(string[] args)
         {
             Company company = SAPHelper.GetCompany();
             if (company.Connected)
                 company.Disconnect();
-            int result = company.Connect();
-            if (result != 0)
+            RESULT_FUNCTIONS = company.Connect();
+            if (RESULT_FUNCTIONS != 0)
             {
                 company.GetLastError(out ERROR_CODE, out ERROR_MESSAGE);
                 Console.Error.Write($"({ERROR_CODE})-{ERROR_MESSAGE}");
@@ -29,11 +30,19 @@ namespace Ventura.SAP.Tools.UDT
                 var item = args[i];
                 if (!udoManager.GetByKey(item))
                 {
-                    Console.WriteLine("Don't exists the UDO {0}", item);
+                    Console.WriteLine("Don't exists the UDT {0}", item);
                     continue;
                 }
-                udoManager.Remove();
+                RESULT_FUNCTIONS = udoManager.Remove();
+                Console.WriteLine("Removing UDT: {0} | Result: {1}", item, RESULT_FUNCTIONS == 0);                
+                if(RESULT_FUNCTIONS != 0)
+                {
+                    company.GetLastError(out ERROR_CODE, out ERROR_MESSAGE);
+                    Console.Error.WriteLine($"Error for removing: ({ERROR_CODE})-{ERROR_MESSAGE}");
+                }
+
             }
+            Console.WriteLine("Finish process");
             Console.Read();
             company.Disconnect();
         }
