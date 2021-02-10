@@ -33,8 +33,9 @@ namespace Ventura.SAP.Tools.UDO
                     Console.WriteLine("Don't exists the UDO {0}", item);
                     continue;
                 }
-                udoManager.Remove();
+                Console.Write("Eliminando la tabla: {0} | Resultado: {1}", item, udoManager.Remove() == 0);
             }
+            Console.WriteLine("Proceso finalizado");
             Console.Read();
             company.Disconnect();
         }
