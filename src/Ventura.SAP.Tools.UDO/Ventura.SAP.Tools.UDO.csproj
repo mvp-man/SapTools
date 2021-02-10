@@ -51,7 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ventura.SAP.Tools.CrossCutting\Ventura.SAP.Tools.CrossCutting.csproj">
+<<<<<<< HEAD
       <Project>{d4615813-b08d-417e-bfc9-275f6ee5d6d3}</Project>
+=======
+      <Project>{D4615813-B08D-417E-BFC9-275F6EE5D6D3}</Project>
+>>>>>>> e3f0ca3ab2bd88d9586c11d5f347b0c517edc95a
       <Name>Ventura.SAP.Tools.CrossCutting</Name>
     </ProjectReference>
   </ItemGroup>
