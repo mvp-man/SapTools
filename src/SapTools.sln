@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventura.SAP.Tools.UDO", "Ventura.SAP.Tools.UDO\Ventura.SAP.Tools.UDO.csproj", "{45ADDAC4-127A-44EB-8DB1-DF8791DCFA94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventura.SAP.Tools.UDT", "Ventura.SAP.Tools.UDT\Ventura.SAP.Tools.UDT.csproj", "{1A3897FA-6EB2-4549-BB6D-1CD582B9EA11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventura.SAP.Tools.CrossCutting", "Ventura.SAP.Tools.CrossCutting\Ventura.SAP.Tools.CrossCutting.csproj", "{D4615813-B08D-417E-BFC9-275F6EE5D6D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventura.SAP.Tools.FS", "Ventura.SAP.Tools.FS\Ventura.SAP.Tools.FS.csproj", "{385814CE-7493-41E7-B559-FC1D09DAB8DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +29,15 @@ Global
 		{D4615813-B08D-417E-BFC9-275F6EE5D6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4615813-B08D-417E-BFC9-275F6EE5D6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4615813-B08D-417E-BFC9-275F6EE5D6D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385814CE-7493-41E7-B559-FC1D09DAB8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385814CE-7493-41E7-B559-FC1D09DAB8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385814CE-7493-41E7-B559-FC1D09DAB8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385814CE-7493-41E7-B559-FC1D09DAB8DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9CA4FD7-0AE2-429B-B5AD-CA5EA01D7F28}
 	EndGlobalSection
 EndGlobal
