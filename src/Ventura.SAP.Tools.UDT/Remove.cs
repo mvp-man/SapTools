@@ -40,7 +40,6 @@ namespace Ventura.SAP.Tools.UDT
                     company.GetLastError(out ERROR_CODE, out ERROR_MESSAGE);
                     Console.Error.WriteLine($"Error for removing: ({ERROR_CODE})-{ERROR_MESSAGE}");
                 }
-
             }
             Console.WriteLine("Finish process");
             Console.Read();
