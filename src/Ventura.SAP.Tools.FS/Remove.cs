@@ -28,7 +28,7 @@ namespace Ventura.SAP.Tools.FS
 
             var udoManager = (FormattedSearches)company.GetBusinessObject(BoObjectTypes.oFormattedSearches);
             var oRecordSet = (Recordset) company.GetBusinessObject(BoObjectTypes.BoRecordset);
-            oRecordSet.DoQuery("select FRQ.IndexID, QRY.IntrnalKey, CAT.CategoryId from OQCN CAT, OUQR QRY, CSHS FRQ where CAT.CategoryId = QRY.QCategory and QRY.IntrnalKey = FRQ.QueryId and CAT.CatName like '%Producción%'");
+            oRecordSet.DoQuery("select FRQ.IndexID, QRY.IntrnalKey, CAT.CategoryId from OQCN CAT, OUQR QRY, CSHS FRQ where CAT.CategoryId = QRY.QCategory and QRY.IntrnalKey = FRQ.QueryId and CAT.CatName like '%BPVS - Producción Agrícola%'");
             while (!oRecordSet.EoF)
             {
                 int mappedIndexForm = int.Parse(oRecordSet.Fields.Item("IndexID").Value.ToString());
